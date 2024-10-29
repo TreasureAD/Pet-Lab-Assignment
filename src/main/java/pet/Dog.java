@@ -1,6 +1,6 @@
 package pet;
 
-public class Dog extends Pet {
+public class Dog extends Pet implements IPet {
 
     public Dog(String name) {
         super(name);
@@ -8,6 +8,11 @@ public class Dog extends Pet {
 
     @Override
     public String speak() {
-        return "Woof!";
+        return "barking!";
+    }
+
+    @Override
+    public void greetOwner() {
+        System.out.println("wag tail");
     }
 }
